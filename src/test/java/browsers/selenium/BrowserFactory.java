@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BrowserFactory {
 
-    public static WebDriver launch(Browsers browser) {
+    public static WebDriver iniWebDriver(Browsers browser) {
         if (browser.equals(Browsers.CHROME)) {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("start-maximized");
@@ -21,6 +21,6 @@ public class BrowserFactory {
         }
 
         // default
-        return new ChromeDriver();
+      return new ChromeDriver();
     }
 }

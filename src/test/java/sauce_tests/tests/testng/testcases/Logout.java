@@ -13,7 +13,7 @@ public class Logout extends Webdriver {
     String dtPassword = "secret_sauce";
 
     @Test
-    public void TC004_Logout() {
+    public void Logout() {
         LoginPage pgLogin = new LoginPage(driver);
         pgLogin.login(dtUsername, dtPassword);
 
