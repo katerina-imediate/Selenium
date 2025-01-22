@@ -22,7 +22,7 @@ public class AddToCart_Count extends Webdriver {
     }
 
     @Test
-    public void TC002_AddToCart_Count() {
+    public void AddToCart_Count() {
         new LoginPage(driver).login(dtUsername, dtPassword);
 
         ProductsPage pgProducts = new ProductsPage(driver);

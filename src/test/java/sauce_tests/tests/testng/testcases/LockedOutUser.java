@@ -11,7 +11,7 @@ public class LockedOutUser extends Webdriver {
     String dtPassword = "secret_sauce";
 
     @Test
-    public void TC002_LockedOutUser() {
+    public void LockedOutUser() {
         LoginPage pgLogin = new LoginPage(driver);
         pgLogin.login(dtUsername, dtPassword);
         Assert.assertTrue(pgLogin.isUserLockedOut());

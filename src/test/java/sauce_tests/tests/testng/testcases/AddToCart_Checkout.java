@@ -17,7 +17,7 @@ public class AddToCart_Checkout extends Webdriver {
     String prod2 = "Test.allTheThings() T-Shirt (Red)";
 
     @Test
-    public void TC001_AddToCart_Checkout() {
+    public void AddToCart_Checkout() {
 
         // TODO: Data provider
         CheckoutContext dtYourInfo = new CheckoutContext();
