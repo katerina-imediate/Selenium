@@ -1,7 +1,7 @@
 package browsers.enums;
 
 public enum Browsers {
-    CHROME,
+   CHROME,
     FIREFOX,
     EDGE
 }
