@@ -28,7 +28,6 @@ jobs:
 #      - run: |
 #          firefox --version
       - name: Install Chrome
-        uses: browser-actions/setup-chrome@latest
       - run: apt-get install -y ./google-chrome-stable_current_amd64.deb
              google-chrome --version
 
