@@ -20,7 +20,7 @@ public abstract class Webdriver {
     @BeforeMethod
     public void setup() {
         driver = BrowserFactory.iniWebDriver(browser);
-        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Waits.WAIT_IMPLICIT));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Waits.WAIT_IMPLICIT));
         //driver.manage().window().maximize();
         driver.get(url);
     }
