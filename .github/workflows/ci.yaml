@@ -30,6 +30,6 @@ jobs:
               --ignore-certificate-errors
               --no-sandbox
               --headless
-      - run: google-chrome-stable --version
+        run: google-chrome-stable --version
       - name: Build with Maven
         run: mvn clean test
