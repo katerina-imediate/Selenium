@@ -3,6 +3,7 @@ package sauce_tests.tests.testng.testcases;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import sauce_tests.contexts.CheckoutContext;
+import sauce_tests.pages.CheckoutPage;
 import sauce_tests.pages.LoginPage;
 import sauce_tests.pages.ProductsPage;
 import sauce_tests.pages.ShoppingCartPage;
@@ -30,7 +31,7 @@ public class AddToCart_Checkout extends Webdriver {
                 .add(prod1)
                 .add(prod2);
 
-        sauce_tests.pages.CheckoutPage pgCheckout = new ShoppingCartPage(driver)
+        CheckoutPage pgCheckout = new ShoppingCartPage(driver)
                 .open()
                 .checkout()
                 .setInformation(dtYourInfo)

@@ -24,7 +24,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.2</version>
                 <configuration>
-                    <!-- Default test runs -->
+<!--                     Default test runs-->
                     <suiteXmlFiles>
                         <suiteXmlFile>
                             ${suiteXmlFileDir}Regression.xml
