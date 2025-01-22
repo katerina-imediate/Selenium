@@ -23,27 +23,10 @@ jobs:
           cache: maven
 
       - uses: actions/download-artifact@v4
-      - with:
-        name: dist
 
-      - uses: ./
       - run: |
-                firefox --version
-      - uses: ./
-        with:
-                    firefox-version: latest-esr
-      - run: |
-                    firefox --version
-      - uses: ./
-        with:
-                    firefox-version: "132.0"
-      - run: |
-                    firefox --version
-      - uses: ./
-        with:
-                    firefox-version: "devedition-132.0b1"
-      - run: |
-                    firefox --version
+               ./
+    
 
 #          sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 & # optional
       - name: Build with Maven
