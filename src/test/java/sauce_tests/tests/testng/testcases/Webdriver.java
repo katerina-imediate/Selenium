@@ -13,14 +13,14 @@ public abstract class Webdriver {
 
     // TODO: Externalise config data
     protected WebDriver driver;
-    private Browsers browser = Browsers.FIREFOX;
+    private Browsers browser = Browsers.EDGE;
     private String url = "https://www.saucedemo.com/";
 
     @BeforeMethod
     public void setup() {
         driver = BrowserFactory.launch(browser);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Waits.WAIT_IMPLICIT));
-        driver.manage().window().maximize();
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Waits.WAIT_IMPLICIT));
+        //driver.manage().window().maximize();
         driver.get(url);
     }
 
