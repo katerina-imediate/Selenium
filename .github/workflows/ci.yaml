@@ -28,13 +28,15 @@ jobs:
 #      - run: |
 #          firefox --version
       - name: Install Chrome
-        run: apt-get install -y ./google-chrome-stable_current_amd64.deb
-             google-chrome --version
+        uses: actions/download-artifact@v4
         with:
-          # Optional: do not specify to match Chrome's version
-          chromedriver-version: '88.0.4324.96'
-          options:
-            addArguments--remote-debugging-port=9222
+            # Optional: do not specify to match Chrome's version
+            chromedriver-version: '88.0.4324.96'
+            options:
+              addArguments--remote-debugging-port=9222
+#        run: apt-get install -y ./google-chrome-stable_current_amd64.deb
+#             google-chrome --version
+
 
       #          sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 & # optional
       - name: Build with Maven
