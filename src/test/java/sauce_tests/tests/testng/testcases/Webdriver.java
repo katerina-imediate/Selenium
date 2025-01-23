@@ -6,8 +6,7 @@ package sauce_tests.tests.testng.testcases;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 //import sauce_tests.config.Waits;
-
-import java.time.Duration;
+//import java.time.Duration;
 
 public abstract class Webdriver {
 
@@ -25,8 +24,8 @@ public abstract class Webdriver {
         chromeDriver.get(url);
     }
 
-    @AfterMethod
-    public void tearDown() {
-        chromeDriver.quit();
-    }
+//    @AfterMethod
+//    public void tearDown() {
+//        chromeDriver.quit();
+//    }
 }

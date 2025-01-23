@@ -15,7 +15,7 @@ public class AddToCart_Count extends Webdriver {
 
     String prod1 = "Sauce Labs Onesie";
 
-    @Test(enabled = false)
+    @Test
     private void test() {
         new LoginPage(chromeDriver).login(dtUsername, dtPassword);
         new HeaderPage(chromeDriver).navigateToMenu(AppMenu.LOGOUT);
