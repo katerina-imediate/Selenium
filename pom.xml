@@ -25,7 +25,9 @@
                 <version>2.12.1</version>
 
                 <configuration>
-<!--                     Default test runs-->
+                    <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+<!--                     Default te
+st runs-->
                     <suiteXmlFiles>
                         <suiteXmlFile>
                             ${suiteXmlFileDir}Regression.xml
