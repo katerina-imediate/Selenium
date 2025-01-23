@@ -20,7 +20,7 @@ jobs:
           distribution: 'corretto'
           cache: maven
 
-      - name: Run Chrome
+#      - name: Run Chrome
 #        uses: actions/download-artifact@v4
 #        with:
 #            # Optional: do not specify to match Chrome's version
@@ -28,7 +28,7 @@ jobs:
 #            options:
 #              addArguments--remote-debugging-port=9222
 
-        run: chromedriver --url-base=/wd/hub
+#        run: chromedriver --url-base=/wd/hub
 #        run: apt-get install -y ./google-chrome-stable_current_amd64.deb
 #             google-chrome --version
 
