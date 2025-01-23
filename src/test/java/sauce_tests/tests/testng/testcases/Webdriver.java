@@ -4,6 +4,7 @@ package sauce_tests.tests.testng.testcases;
 //import browsers.selenium.BrowserFactory;
 //import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chromium.ChromiumDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 //import sauce_tests.config.Waits;
@@ -12,7 +13,7 @@ import org.testng.annotations.*;
 public abstract class Webdriver {
 
     // TODO: Externalise config data
-    FirefoxDriver chromeDriver = new FirefoxDriver();
+   ChromeDriver chromeDriver = new ChromeDriver();
    // public Browsers browser = Browsers.CHROME;
 
     public String url = "https://www.saucedemo.com/";
