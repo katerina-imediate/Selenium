@@ -12,7 +12,7 @@ public class LockedOutUser extends Webdriver {
 
     @Test
     public void LockedOutUser() {
-        LoginPage pgLogin = new LoginPage(driver);
+        LoginPage pgLogin = new LoginPage(chromeDriver);
         pgLogin.login(dtUsername, dtPassword);
         Assert.assertTrue(pgLogin.isUserLockedOut());
     }

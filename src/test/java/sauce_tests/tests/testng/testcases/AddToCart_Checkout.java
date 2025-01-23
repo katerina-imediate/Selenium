@@ -26,12 +26,12 @@ public class AddToCart_Checkout extends Webdriver {
         dtYourInfo.setLastName("Doe");
         dtYourInfo.setZip("3000");
 
-        new LoginPage(driver).login(dtUsername, dtPassword);
-        new ProductsPage(driver)
+        new LoginPage(chromeDriver).login(dtUsername, dtPassword);
+        new ProductsPage(chromeDriver)
                 .add(prod1)
                 .add(prod2);
 
-        CheckoutPage pgCheckout = new ShoppingCartPage(driver)
+        CheckoutPage pgCheckout = new ShoppingCartPage(chromeDriver)
                 .open()
                 .checkout()
                 .setInformation(dtYourInfo)

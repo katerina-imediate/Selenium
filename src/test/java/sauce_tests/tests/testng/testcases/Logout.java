@@ -14,10 +14,10 @@ public class Logout extends Webdriver {
 
     @Test
     public void Logout() {
-        LoginPage pgLogin = new LoginPage(driver);
+        LoginPage pgLogin = new LoginPage(chromeDriver);
         pgLogin.login(dtUsername, dtPassword);
 
-        new HeaderPage(driver).navigateToMenu(AppMenu.LOGOUT);
+        new HeaderPage(chromeDriver).navigateToMenu(AppMenu.LOGOUT);
         Assert.assertTrue(pgLogin.isAt());
     }
 }

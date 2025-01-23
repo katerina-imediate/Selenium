@@ -15,20 +15,20 @@ public class AddToCart_Count extends Webdriver {
 
     String prod1 = "Sauce Labs Onesie";
 
-    @Test
+    @Test(enabled = false)
     private void test() {
-        new LoginPage(driver).login(dtUsername, dtPassword);
-        new HeaderPage(driver).navigateToMenu(AppMenu.LOGOUT);
+        new LoginPage(chromeDriver).login(dtUsername, dtPassword);
+        new HeaderPage(chromeDriver).navigateToMenu(AppMenu.LOGOUT);
     }
 
     @Test
     public void AddToCart_Count() {
-        new LoginPage(driver).login(dtUsername, dtPassword);
+        new LoginPage(chromeDriver).login(dtUsername, dtPassword);
 
-        ProductsPage pgProducts = new ProductsPage(driver);
+        ProductsPage pgProducts = new ProductsPage(chromeDriver);
         pgProducts.add(prod1);
 
-        HeaderPage pgHeader = new HeaderPage(driver);
+        HeaderPage pgHeader = new HeaderPage(chromeDriver);
         Assert.assertEquals(1, pgHeader.getCartCount());
     }
 }
