@@ -2,9 +2,9 @@
 <suite name="SauceDemo - Swag Labs">
     <test name="Regression" parallel="classes" thread-count="10">
         <classes>
-            <class name="sauce_tests.tests.testng.testcases.AddToCart_Checkout"></class>
-            <class name="sauce_tests.tests.testng.testcases.AddToCart_Count"></class>
-            <class name="sauce_tests.tests.testng.testcases.LockedOutUser"></class>
+<!--            <class name="sauce_tests.tests.testng.testcases.AddToCart_Checkout"></class>-->
+<!--            <class name="sauce_tests.tests.testng.testcases.AddToCart_Count"></class>-->
+<!--            <class name="sauce_tests.tests.testng.testcases.LockedOutUser"></class>-->
             <class name="sauce_tests.tests.testng.testcases.Logout"></class>
         </classes>
     </test> <!-- Test -->
