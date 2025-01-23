@@ -10,9 +10,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 17
@@ -22,7 +20,6 @@ jobs:
           distribution: 'corretto'
           cache: maven
 
-
 #      - name: Install Chrome
 #        uses: actions/download-artifact@v4
 #        with:
@@ -30,12 +27,13 @@ jobs:
 #            chromedriver-version: '88.0.4324.96'
 #            options:
 #              addArguments--remote-debugging-port=9222
-#      - run: chromedriver --url-base=/wd/hub
+
+      - run: chromedriver --url-base=/wd/hub
 #        run: apt-get install -y ./google-chrome-stable_current_amd64.deb
 #             google-chrome --version
 
 
       #          sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 & # optional
       - name: Build with Maven
-        run:  mvn clean compile package
+        run: _JAVA_OPTIONS=-Djdk.net.URLClassPath.disableClassPathURLCheck=true mvn clean compile package
 
