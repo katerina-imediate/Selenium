@@ -38,16 +38,6 @@
         </plugins>
     </build>
     <dependencies>
-
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.5.1</version>
-            <scope>test</scope>
-
-        </dependency>
-
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -59,12 +49,6 @@
 <!--            <artifactId>selenium-chrome-driver</artifactId>-->
 <!--            <version>4.21.0</version>-->
 <!--        </dependency>-->
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>5.9.2</version>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
