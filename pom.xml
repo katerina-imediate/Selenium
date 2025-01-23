@@ -22,10 +22,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0</version>
+                <version>2.18.1</version>
 
                 <configuration>
-                    <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=false</argLine>
+<!--                    <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=false</argLine>-->
 <!--                     Default test runs-->
                     <suiteXmlFiles>
                         <suiteXmlFile>
