@@ -20,7 +20,7 @@ jobs:
           distribution: 'corretto'
           cache: maven
 
-#      - name: Install Chrome
+      - name: Run Chrome
 #        uses: actions/download-artifact@v4
 #        with:
 #            # Optional: do not specify to match Chrome's version
