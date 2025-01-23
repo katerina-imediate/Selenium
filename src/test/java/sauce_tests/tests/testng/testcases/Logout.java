@@ -6,7 +6,7 @@ import sauce_tests.enums.AppMenu;
 import sauce_tests.pages.HeaderPage;
 import sauce_tests.pages.LoginPage;
 
-public class Logout extends Webdriver {
+public class Logout extends  Webdriver{
 
     // TODO: Data provider
     String dtUsername = "standard_user";
