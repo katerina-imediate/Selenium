@@ -25,7 +25,7 @@
                 <version>3.0.0</version>
 
                 <configuration>
-<!--                    <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>-->
+                    <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=false</argLine>
 <!--                     Default te
 st runs-->
                     <suiteXmlFiles>
