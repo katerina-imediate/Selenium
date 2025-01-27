@@ -16,7 +16,7 @@ public abstract class Webdriver {
 //    private Browsers browser = Browsers.CHROME;
     private String url = "https://www.saucedemo.com/";
 
-    @BeforeMethod
+    @BeforeClass
     public void setup() {
 //        driver = BrowserFactory.launch(driver);
 //        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Waits.WAIT_IMPLICIT));
