@@ -17,18 +17,18 @@ public class AddToCart_Count extends Webdriver {
 
     @Test
     private void test() {
-        new LoginPage(chromeDriver).login(dtUsername, dtPassword);
-        new HeaderPage(chromeDriver).navigateToMenu(AppMenu.LOGOUT);
+        new LoginPage(driver).login(dtUsername, dtPassword);
+        new HeaderPage(driver).navigateToMenu(AppMenu.LOGOUT);
     }
 
     @Test
     public void AddToCart_Count() {
-        new LoginPage(chromeDriver).login(dtUsername, dtPassword);
+        new LoginPage(driver).login(dtUsername, dtPassword);
 
-        ProductsPage pgProducts = new ProductsPage(chromeDriver);
+        ProductsPage pgProducts = new ProductsPage(driver);
         pgProducts.add(prod1);
 
-        HeaderPage pgHeader = new HeaderPage(chromeDriver);
+        HeaderPage pgHeader = new HeaderPage(driver);
         Assert.assertEquals(1, pgHeader.getCartCount());
     }
 }

@@ -17,8 +17,10 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: '17'
-          distribution: 'corretto'
+          distribution: 'temurin'
           cache: maven
+      - name: Build with Maven
+        run: mvn clean test
 
 #      - name: Run Chrome
 #        uses: actions/download-artifact@v4
@@ -34,6 +36,6 @@ jobs:
 
 
       #          sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 & # optional
-      - name: Build with Maven
-        run: _JAVA_OPTIONS=-Djdk.net.URLClassPath.disableClassPathURLCheck=true mvn clean compile package #_JAVA_OPTIONS=-Djdk.net.URLClassPath.disableClassPathURLCheck=true
-
+#      - name: Build with Maven
+#        run: _JAVA_OPTIONS=-Djdk.net.URLClassPath.disableClassPathURLCheck=true mvn clean compile package #_JAVA_OPTIONS=-Djdk.net.URLClassPath.disableClassPathURLCheck=true
+#
