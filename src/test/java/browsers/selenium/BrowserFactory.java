@@ -12,7 +12,12 @@ public class BrowserFactory {
     public static WebDriver launch(Browsers browser) {
         if (browser.equals(Browsers.CHROME)) {
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("start-maximized");
+            options.addArguments("--profile-directory=Profile 1");
+
+//            options.addArguments("--user-data-dir={}");
+//            options.addArguments("--remote-debugging-port=9222");
+//            options.setBinary("/usr/bin/google-chrome");
+
             return new ChromeDriver();
         } else if (browser.equals(Browsers.FIREFOX)) {
             return new FirefoxDriver();
