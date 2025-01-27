@@ -14,8 +14,8 @@ public class BrowserFactory {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--profile-directory=Profile 1");
 
-//            options.addArguments("--user-data-dir={}");
-//            options.addArguments("--remote-debugging-port=9222");
+            options.addArguments("--user-data-dir=/user-data");
+            options.addArguments("--remote-debugging-port=9222");
 //            options.setBinary("/usr/bin/google-chrome");
 
             return new ChromeDriver();
