@@ -17,25 +17,24 @@
     </properties>
 
     <build>
-<!--        <plugins>-->
-            <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
-<!--            <plugin>-->
+        <plugins>
+            <plugin>
 
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-surefire-plugin</artifactId>-->
-<!--                <version>3.5.2</version>-->
-<!--                <configuration>-->
-<!--&lt;!&ndash;                    <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=false</argLine>&ndash;&gt;-->
-<!--&lt;!&ndash;                     Default test runs&ndash;&gt;-->
-<!--                    <suiteXmlFiles>-->
-<!--                        <suiteXmlFile>-->
-<!--                         src/test/java/sauce_tests/tests/testng/testsuites/Regression.xml-->
-<!--                        </suiteXmlFile>-->
-<!--                    </suiteXmlFiles>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.2</version>
+                <configuration>
+<!--                    <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=false</argLine>-->
+<!--                     Default test runs-->
+                    <suiteXmlFiles>
+                        <suiteXmlFile>
+                         src/test/java/sauce_tests/tests/testng/testsuites/Regression.xml
+                        </suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
 
-<!--        </plugins>-->
+        </plugins>
     </build>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
