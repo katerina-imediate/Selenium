@@ -24,8 +24,8 @@ public abstract class Webdriver {
         driver.get(url);
     }
 
-//    @AfterMethod
-//    public void tearDown() {
-//       driver.quit();
-//    }
+    @AfterClass
+    public void tearDown() {
+       driver.quit();
+    }
 }
