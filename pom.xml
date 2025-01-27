@@ -22,7 +22,7 @@
 
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.5.2</version>
+                <version>3.0.0-M4</version>
                 <configuration>
 <!--                    <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=false</argLine>-->
 <!--                     Default test runs-->
@@ -48,8 +48,13 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.27.0</version>
+            <version>4.28.1</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.seleniumhq.selenium</groupId>-->
+<!--            <artifactId>selenium-chrome-driver</artifactId>-->
+<!--            <version>3.141.59</version>-->
+<!--        </dependency>-->
 
     </dependencies>
 
