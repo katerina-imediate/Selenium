@@ -13,11 +13,10 @@ public class BrowserFactory {
         if (browser.equals(Browsers.CHROME)) {
 
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--headless=new");
-            WebDriver driver = new ChromeDriver(options);
+           // options.addArguments("--headless=new");
+            options.addArguments("--allow-running-insecure-content\", \"--disable-web-security\"");
 
-
-//            options.addArguments("--user-data-dir=/user-data");
+//            options.addArguments("--user-data-dir=/user-data"); --allow-running-insecure-content", "--disable-web-security"
 //            options.addArguments("--remote-debugging-port=9222");
 //            options.setBinary("/usr/bin/google-chrome");
 
