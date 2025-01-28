@@ -11,11 +11,14 @@ public class BrowserFactory {
 
     public static WebDriver launch(Browsers browser) {
         if (browser.equals(Browsers.CHROME)) {
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments("--profile-directory=Profile 1");
 
-            options.addArguments("--user-data-dir=/user-data");
-            options.addArguments("--remote-debugging-port=9222");
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless=new");
+            WebDriver driver = new ChromeDriver(options);
+
+
+//            options.addArguments("--user-data-dir=/user-data");
+//            options.addArguments("--remote-debugging-port=9222");
 //            options.setBinary("/usr/bin/google-chrome");
 
             return new ChromeDriver();
