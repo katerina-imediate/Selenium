@@ -13,21 +13,25 @@ import java.time.Duration;
 
 public abstract class Webdriver {
 
-    WebDriver driver= new ChromeDriver();
-   private Browsers browser = Browsers.CHROME;
 
-    private String url = "https://www.saucedemo.com/";
 
-    @BeforeTest
+       ChromeDriver driver = new ChromeDriver();
+
+//    private Browsers browser = Browsers.CHROME;
+
+        String url = "https://www.saucedemo.com/";
+
+    @BeforeClass
     public void setup() {
-      driver = BrowserFactory.launch(browser);
+//        System.setProperty("webdriver.chrome.driver","chromedriver.linux");
+//       driver = BrowserFactory.launch(driver);
 //        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Waits.WAIT_IMPLICIT));
 //        driver.manage().window().maximize();
         driver.get(url);
     }
 
-    @AfterTest
+    @AfterMethod
     public void tearDown() {
-       driver.quit();
+        driver.quit();
     }
 }

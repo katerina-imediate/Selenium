@@ -9,23 +9,23 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BrowserFactory {
 
-    public static WebDriver launch(Browsers browser) {
-        if (browser.equals(Browsers.CHROME)) {
+    public static WebDriver launch(WebDriver driver) {
+       if (driver.equals(Browsers.CHROME)) {
 
             ChromeOptions options = new ChromeOptions();
            // options.addArguments("--headless=new");
             options.addArguments("--allow-running-insecure-content\", \"--disable-web-security\"");
-
+            ChromeDriver  chromeDriver = new ChromeDriver(options);
 //            options.addArguments("--user-data-dir=/user-data"); --allow-running-insecure-content", "--disable-web-security"
 //            options.addArguments("--remote-debugging-port=9222");
 //            options.setBinary("/usr/bin/google-chrome");
 
-            return new ChromeDriver();
-        } else if (browser.equals(Browsers.FIREFOX)) {
+            return chromeDriver;
+        } else if (driver.equals(Browsers.FIREFOX)) {
             return new FirefoxDriver();
-        } else if (browser.equals(Browsers.EDGE)) {
+        } else if (driver.equals(Browsers.EDGE)) {
             return new EdgeDriver();
         }
-        return new ChromeDriver();
+        return null;
     }
 }
