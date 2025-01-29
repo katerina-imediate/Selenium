@@ -21,7 +21,8 @@ jobs:
           cache: maven
 
       - name: Build and Run Tests
-        run: mvn clean verify -X
+        run: mvn -B package
+
       - name: Publish Test Report
         if: success() || failure()
         uses: scacap/action-surefire-report@v1
