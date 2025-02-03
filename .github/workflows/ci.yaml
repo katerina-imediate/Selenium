@@ -22,15 +22,11 @@ jobs:
 
       - name: Install Google Chrome
         uses: actions/download-artifact@v4
-        with:
-            chrome-version: 120
-            install-chromedriver: true
-            install-dependencies: true
 
       - run: |
           sudo apt-get update
           sudo apt-get upgrade google-chrome-stable -y
-          "CHROME_BIN" --version ; "$CHROMEWEBDRIVER/chromedriver --version"
+#          "CHROME_BIN" --version ; "$CHROMEWEBDRIVER/chromedriver --version"
 
       - name: Build and Run Tests
         run: mvn clean test
