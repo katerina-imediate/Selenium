@@ -1,6 +1,8 @@
 package sauce_tests.tests.testng.testcases;
 
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import sauce_tests.contexts.CheckoutContext;
 import sauce_tests.pages.CheckoutPage;
@@ -16,6 +18,13 @@ public class AddToCart_Checkout extends Webdriver {
 
     String prod1 = "Sauce Labs Onesie";
     String prod2 = "Test.allTheThings() T-Shirt (Red)";
+    protected ChromeDriver driver = new ChromeDriver();
+
+
+    @BeforeTest
+    public void setup() {
+        driver.get("https://www.saucedemo.com/");
+    }
 
     @Test
     public void AddToCart_Checkout() {
