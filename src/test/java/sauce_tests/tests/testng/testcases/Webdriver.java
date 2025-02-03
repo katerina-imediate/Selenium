@@ -21,7 +21,7 @@ public abstract class Webdriver {
 
 
 
-    protected   ChromeDriver driver;
+    protected ChromeDriver driver = new ChromeDriver();
     private static ChromeDriverService service;
 
 
