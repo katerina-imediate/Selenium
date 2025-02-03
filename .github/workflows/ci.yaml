@@ -20,6 +20,17 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
+      - name: Install Google Chrome
+        uses: ./
+        with:
+            chrome-version: 120
+            install-chromedriver: true
+            install-dependencies: true
+        id: setup-chrome
+            - run: |
+                "${{ steps.setup-chrome.outputs.chrome-path }}" --version
+                "${{ steps.setup-chrome.outputs.chromedriver-path }}" --version
+
       - name: Build and Run Tests
         run: mvn -B package
 
