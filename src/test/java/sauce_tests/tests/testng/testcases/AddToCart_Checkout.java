@@ -1,5 +1,6 @@
 package sauce_tests.tests.testng.testcases;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -27,6 +28,8 @@ public class AddToCart_Checkout {
 
     @BeforeTest
     public void setup() {
+        WebDriverManager.chromedriver().clearCache();
+
         driver.manage().window().maximize();
 //        System.setProperty("webdriver.chrome.driver", new File(System.getProperty("user.home"), "chromedriver.exe").getAbsolutePath());
 
