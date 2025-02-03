@@ -30,17 +30,17 @@ public abstract class Webdriver {
         String url = "https://www.saucedemo.com/";
 
 
-    @BeforeClass
-    public void setup() {
-//        System.setProperty("webdriver.chrome.driver","chromedriver.linux");
-//       driver = BrowserFactory.launch(driver);
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Waits.WAIT_IMPLICIT));
-//        driver.manage().window().maximize();
-        driver.get(url);
-    }
+//    @BeforeClass
+//    public void setup() {
+////        System.setProperty("webdriver.chrome.driver","chromedriver.linux");
+////       driver = BrowserFactory.launch(driver);
+////        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Waits.WAIT_IMPLICIT));
+////        driver.manage().window().maximize();
+//        driver.get(url);
+//    }
 
-    @AfterMethod
-    public void tearDown() {
-        driver.quit();
-    }
+//    @AfterMethod
+//    public void tearDown() {
+//        driver.quit();
+//    }
 }

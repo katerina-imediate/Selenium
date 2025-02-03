@@ -2,6 +2,8 @@ package sauce_tests.tests.testng.testcases;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import sauce_tests.contexts.CheckoutContext;
@@ -10,7 +12,9 @@ import sauce_tests.pages.LoginPage;
 import sauce_tests.pages.ProductsPage;
 import sauce_tests.pages.ShoppingCartPage;
 
-public class AddToCart_Checkout extends Webdriver {
+import java.io.File;
+
+public class AddToCart_Checkout {
 
     // TODO: Data provider
     String dtUsername = "standard_user";
@@ -18,12 +22,19 @@ public class AddToCart_Checkout extends Webdriver {
 
     String prod1 = "Sauce Labs Onesie";
     String prod2 = "Test.allTheThings() T-Shirt (Red)";
-    protected ChromeDriver driver = new ChromeDriver();
 
+    ChromeDriver driver = new ChromeDriver();
 
     @BeforeTest
     public void setup() {
+        driver.manage().window().maximize();
+//        System.setProperty("webdriver.chrome.driver", new File(System.getProperty("user.home"), "chromedriver.exe").getAbsolutePath());
+
         driver.get("https://www.saucedemo.com/");
+    }
+    @AfterTest
+    public void tearDown() {
+        driver.quit();
     }
 
     @Test
@@ -34,8 +45,10 @@ public class AddToCart_Checkout extends Webdriver {
         dtYourInfo.setFirstName("John");
         dtYourInfo.setLastName("Doe");
         dtYourInfo.setZip("3000");
+        LoginPage pgLogin = new LoginPage(driver);
 
-        new LoginPage(driver).login(dtUsername, dtPassword);
+        Assert.assertTrue(pgLogin.isAt());
+        pgLogin.login(dtUsername, dtPassword);
         new ProductsPage(driver)
                 .add(prod1)
                 .add(prod2);

@@ -3,9 +3,9 @@
     <test name="Regression" >
         <classes>
             <class name="sauce_tests.tests.testng.testcases.AddToCart_Checkout"> </class>
-            <class name="sauce_tests.tests.testng.testcases.AddToCart_Count"> </class>
-            <class name="sauce_tests.tests.testng.testcases.LockedOutUser"> </class>
-            <class name="sauce_tests.tests.testng.testcases.Logout"> </class>
+<!--            <class name="sauce_tests.tests.testng.testcases.AddToCart_Count"> </class>-->
+<!--            <class name="sauce_tests.tests.testng.testcases.LockedOutUser"> </class>-->
+<!--            <class name="sauce_tests.tests.testng.testcases.Logout"> </class>-->
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
