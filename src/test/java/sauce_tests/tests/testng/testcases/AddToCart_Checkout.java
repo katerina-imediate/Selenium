@@ -15,7 +15,7 @@ import sauce_tests.pages.ShoppingCartPage;
 
 import java.io.File;
 
-public class AddToCart_Checkout {
+public class AddToCart_Checkout extends  Webdriver {
 
     // TODO: Data provider
     String dtUsername = "standard_user";
@@ -24,21 +24,21 @@ public class AddToCart_Checkout {
     String prod1 = "Sauce Labs Onesie";
     String prod2 = "Test.allTheThings() T-Shirt (Red)";
 
-    ChromeDriver driver = new ChromeDriver();
+//    ChromeDriver driver = new ChromeDriver();
 
-    @BeforeTest
-    public void setup() {
-        WebDriverManager.chromedriver().clearCache();
-
-        driver.manage().window().maximize();
-//        System.setProperty("webdriver.chrome.driver", new File(System.getProperty("user.home"), "chromedriver.exe").getAbsolutePath());
-
-        driver.get("https://www.saucedemo.com/");
-    }
-    @AfterTest
-    public void tearDown() {
-        driver.quit();
-    }
+//    @BeforeTest
+//    public void setup() {
+////        WebDriverManager.chromedriver().clearCache();
+//
+////        driver.manage().window().maximize();
+////        System.setProperty("webdriver.chrome.driver", new File(System.getProperty("user.home"), "chromedriver.exe").getAbsolutePath());
+//
+//        driver.get("https://www.saucedemo.com/");
+//    }
+//    @AfterTest
+//    public void tearDown() {
+//        driver.quit();
+//    }
 
     @Test
     public void AddToCart_Checkout() {
@@ -52,6 +52,7 @@ public class AddToCart_Checkout {
 
         Assert.assertTrue(pgLogin.isAt());
         pgLogin.login(dtUsername, dtPassword);
+        WebDriverManager.chromedriver().clearCache();
         new ProductsPage(driver)
                 .add(prod1)
                 .add(prod2);
