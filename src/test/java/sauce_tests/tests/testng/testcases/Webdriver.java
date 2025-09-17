@@ -18,7 +18,7 @@ public abstract class Webdriver {
     @BeforeClass
     public void setup() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+        options.addArguments("--headless=new");
         options.addArguments("--allow-running-insecure-content");
 
         driver = new ChromeDriver(options);
