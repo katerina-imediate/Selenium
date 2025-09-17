@@ -9,12 +9,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BrowserFactory {
 
-    public static WebDriver launch(WebDriver driver) {
+    public static WebDriver launch (WebDriver driver) {
        if (driver.equals(Browsers.CHROME)) {
 
             ChromeOptions options = new ChromeOptions();
            // options.addArguments("--headless=new");
-            options.addArguments("--allow-running-insecure-content\", \"--disable-web-security\"");
+            options.addArguments("--allow-running-insecure-content, --disable-web-security");
             ChromeDriver  chromeDriver = new ChromeDriver(options);
 //            options.addArguments("--user-data-dir=/user-data"); --allow-running-insecure-content", "--disable-web-security"
 //            options.addArguments("--remote-debugging-port=9222");

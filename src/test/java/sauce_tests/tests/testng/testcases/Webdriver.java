@@ -6,14 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.chromium.ChromiumDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.*;
-import sauce_tests.config.Waits;
-import java.io.File;
-import java.io.IOException;
-import java.time.Duration;
-import java.util.Arrays;
+
 
 
 public abstract class Webdriver {
@@ -25,6 +19,8 @@ public abstract class Webdriver {
     public void setup() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
+        options.addArguments("--allow-running-insecure-content");
+
         driver = new ChromeDriver(options);
         driver.get(url);
     }

@@ -12,20 +12,15 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-<!--        <suiteXmlFileDir>src/test/java/sauce_tests/tests/testng/testsuites/</suiteXmlFileDir>-->
-
     </properties>
-
     <build>
         <plugins>
             <plugin>
-
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M4</version>
                 <configuration>
-<!--                    <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=false</argLine>-->
-<!--                     Default test runs-->
+
                     <suiteXmlFiles>
                         <suiteXmlFile>
                          src/test/java/sauce_tests/tests/testng/testsuites/Regression.xml
@@ -37,7 +32,6 @@
         </plugins>
     </build>
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 
         <dependency>
             <groupId>org.testng</groupId>
@@ -48,21 +42,13 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.28.1</version>
+            <version>4.17.0</version>
         </dependency>
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>3.8.1</version>
+            <version>6.1.0</version>
             <scope>test</scope>
         </dependency>
-        <!--        <dependency>-->
-<!--            <groupId>org.seleniumhq.selenium</groupId>-->
-<!--            <artifactId>selenium-chrome-driver</artifactId>-->
-<!--            <version>3.141.59</version>-->
-<!--        </dependency>-->
-
     </dependencies>
-
-
 </project>
